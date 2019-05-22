@@ -1,0 +1,37 @@
+{
+  "name": "bibrex-desktop",
+  "version": "0.0.1",
+  "description": "Electron wrapper for Bibrex that adds support for controlling RFID devices",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "no.uio.bibrex",
+    "win": {
+      "target": "nsis",
+      "icon": "bone.ico"
+    }
+  },
+  "postinstall": "electron-builder install-app-deps",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:scriptotek/bibrex-desktop.git"
+  },
+  "keywords": [
+    "electron",
+    "rfid"
+  ],
+  "author": "Dan Michael O. Heggø",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^2.0.0",
+    "electron-builder": "^20.27.0"
+  },
+  "dependencies": {
+    "devtron": "^1.4.0",
+    "electron-debug": "^2.0.0"
+  }
+}
